@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>protfolio</title>
+
+    <meta name="description" content="" /> <!-- ページの説明文 -->
+    <meta name="keywords" content="" /> <!-- ページのキーワード -->
+    <!--og-->
+    <meta property="og:type" content="website" /> <!-- ページの種類 -->
+    <meta property="og:url" content="" /> <!-- ページのURL -->
+    <meta property="og:image" content="" /> <!-- サムネイル画像URL -->
+    <meta property="og:title" content="" /> <!-- ページのタイトル -->
+    <meta property="og:description" content="" /> <!-- ページの説明文 -->
+    <meta property="og:site_name" content="" /> <!-- ページのサイト名 -->
+<!--    favicon -->
+<!--    <link rel="shortcut icon" href="" />-->
+
+<!-- fontawesome -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<!-- css -->
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>    
+    <link rel="stylesheet" href="assets/css/animate.css">  <!-- wow -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" media="all" />  
+
+<!-- js -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  <!-- jQuery -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>    
+    <script src="assets/js/wow.min.js"></script>  <!-- wow -->
+    <script src="assets/js/script.js"></script> <!-- js -->
+    
+</head>
+<body>
+    <div class="container">
+        <header class="container__header header">
+            <h1 class="header__title wow fadeIn">Imai yuichi's portfolio</h1>
+            <nav class="header__wrapper headerNav">
+                <a href="#" class="headerNav__image wow flip">
+                    <img src="assets/img/home.png" alt="">
+                </a>
+                <button class="headerNav__hamburger js-hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>    
+                <ul class="headerNav__list js-headerNav">
+                    <li class="headerNav__listItem wow fadeIn">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="headerNav__listItem wow fadeIn">
+                        <a href="works.html">Works</a>
+                    </li>
+                    <li class="headerNav__listItem wow fadeIn">
+                        <a href="#">About</a>
+                    </li>
+                    <li class="headerNav__listItem wow fadeIn">
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__overlay js-overlay"></div>
+        </header>
+        <main class="container__main  main contact">
+            <section class="main__section contact__section">
+                <p class="common__sectionSubtitle wow fadeInUp" data-wow-duration="0.5s">お問い合わせ</p>
+                <h3 class="common__sectionTitle wow fadeInUp" data-wow-duration="0.5s">Contact</h3>
+                <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdV5gncLWypJeBm1pOxVNdsA_YYF1chn6K5W9ueu8mdXIQS2Q/formResponse" class="contact__form form" method="POST" id="js-form">
+                    <div class="form__mustText"><span>*</span>は入力必須です</div>
+                    <ul class="form__list">
+                        <li class="form__listBox wow fadeInUp" data-wow-duration="0.5s">
+                            <label for="your-name" class="nameBox">
+                                <p>お名前<span>*</span></p>
+                                <input type="text" id="your-name" name="entry.257745575" placeholder="お名前">
+                            </label>
+                        </li>
+                        <li class="form__listBox wow fadeInUp" data-wow-duration="0.5s">
+                            <label for="your-mail" class="mailBox">
+                                <p>メールアドレス<span>*</span></p>
+                                <input type="text" id="your-mail" name="emailAddress" placeholder="メールアドレス">
+                            </label>
+                        </li>
+                        <li class="form__listBox wow fadeInUp" data-wow-duration="0.5s">
+                            <label for="your-message" class="messageBox">
+                                <p>お問い合わせ<span>*</span></p>
+                                <textarea name="entry.1118757505" id="your-message" cols="50" rows="5" placeholder="お問い合わせ内容を入力して下さい"></textarea>
+                            </label>
+                        </li>
+                        <li class="form__listButton wow fadeInUp" data-wow-duration="0.5s">
+                            <button type="submit" class="form__listButton1">送信</button>
+                        </li>
+                    </ul>
+                </form>
+                <p class="contact__successMessage js__successMessage">送信完了しました。<br>お問い合わせありがとうございました</p>
+                <p class="contact__errorMessage js__errorMessage">送信に失敗しました。<br>ページを更新して再度送信して下さい。</p>
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="footer__copyright">Copyright | yuichi 2022</p>
+            <div class="footer__wrapper">
+                <a class="footer__wrapperSns" href="#">
+                    <i class="fa-brands fa-twitter animated-hover faa-wrench footer__wrapperSnsIcon"></i>
+                </a>
+                <a class="footer__wrapperSns" href="#">
+                    <i class="fa-brands fa-instagram animated-hover faa-wrench footer__wrapperSnsIcon"></i>                
+                </a>
+                <a class="footer__wrapperSns" href="#">
+                    <i class="fa-brands fa-github animated-hover faa-wrench footer__wrapperSnsIcon"></i>                
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,251 @@
+@charset "utf-8";
+@import "common";
+
+
+html {
+    font-family: $font-family-basic;
+}
+
+.container {
+    width: 100rem;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+
+    @include sp {
+        width: 100%;
+        padding: 0 1rem;
+        background: linear-gradient(180deg,#FCF7F7, #C4C2C2);
+    }
+
+    @include tab {
+        width: 100%;
+        max-width: 95%;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        z-index: -1;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(180deg,#FCF7F7, #C4C2C2);
+
+        @include sp {
+            content: none;
+            position: static;
+        }
+    }
+}
+
+.main {
+    padding: 8rem 0 8rem;
+}
+
+.top {
+    padding: 15rem 0 35rem;
+    color: #707070;
+    text-align: center;
+
+    @include sp {
+        padding: 13rem 0 25rem;
+    }
+
+    &__title {
+        font-size: 7rem;
+
+        @include sp {
+            font-size: 3.5rem;
+        }
+    }
+
+    &__subtitle {
+        margin-top: 3rem;
+        font-size: 3.6rem;
+
+        @include sp {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__button {
+        display: block;
+        width: 20rem;
+        font-size: 4rem;
+        padding: 1rem;
+        border-radius: 5rem;
+        background: $color-background;
+        margin: 3rem auto 0;
+        border: solid 0.1rem $color-main;
+        text-align: center;
+        transition: all 0.3s ease 0s;
+        position: relative;
+
+        @include sp {
+            width: 10rem;
+            font-size: 1.8rem;
+        }
+
+        &:hover {
+            background: $color-main;
+            color: #FCF7F7;
+            transition: all 0.3s ease 0s;
+        }
+    }
+}
+
+.common {
+
+    &__section {
+        padding: 5rem 0;
+        background: $color-background;
+        color: $color-main;
+        box-shadow: 0 1rem 2.5rem 0 rgba(0, 0, 0, .5);
+
+        @include sp {
+            padding: 3rem 2rem;
+        }
+    }
+
+    &__sectionSubtitle {
+        font-size: 1.8rem;
+        text-align: center;
+
+        @include sp {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__sectionTitle {
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 4.5rem;
+        text-align: center;
+        position: relative;
+
+        @include sp {
+            font-size: 3rem;
+        }
+    
+        &::after {
+            content: "";
+            position: absolute;
+            background: $color-main;
+            width: 7rem;
+            height: 0.1rem;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.works {
+    margin-top: 0;
+
+    &__container {
+        padding: 0 20rem;
+
+        @include sp {
+            padding: 0;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -2rem;
+        padding: 3rem;
+
+        @include sp {
+            margin-left: 0;
+        }
+
+        &Item {
+            margin-top: 2rem;
+            overflow: hidden;
+            width: 30rem;
+            margin-left: 2rem;
+            border-radius: 1rem;
+
+            @include sp {
+                overflow: auto;
+                width: 30rem;
+                margin-left: 0;
+            }
+
+            img {
+                border-radius: 1rem;
+                transition: all 0.5s ease 0s;
+
+                &:hover {
+                    transform: scale(1.05);
+                    transition: all 0.5s ease 0s;
+                }
+            }
+        }
+    }
+}
+
+.skills {
+    margin-top: 8rem;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        margin-top: 3rem;
+        justify-content: space-between;
+        padding: 0 10rem;
+
+        @include sp {
+            padding: 2rem;
+            display: block;
+        }
+        
+
+        &Item {
+
+            @include sp {
+                &:not(:first-child) {
+                    margin-top: 2rem;
+                }    
+            }
+        
+            .Icon {
+                font-size: 15rem;
+                font-style: normal;
+                display: block;
+                text-align: center;
+
+                @include sp {
+                    font-size: 10rem;
+                }
+            }
+
+            span {
+                font-size: 2rem;
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.toTopButton {
+    font-size: 4rem;
+    position: fixed;
+    z-index: 15;
+    color: $color-main;
+    bottom: 10rem;
+    right: 6rem;
+    display: none;
+
+    @include sp {
+        bottom: 10rem;
+        right: 1rem;    
+    }
+}

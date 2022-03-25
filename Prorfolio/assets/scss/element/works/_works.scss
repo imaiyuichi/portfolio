@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+.work {
+    margin-top: 0;
+
+    &__list {
+        margin-top: 3rem;
+
+        &Item {
+            width: 50rem;
+            margin: auto;
+            position: relative;
+
+            @include sp {
+                width: 30rem;
+            }
+
+
+            a {
+                display: block;
+                overflow: hidden;
+                border-radius: 1rem;
+            }
+
+            span {
+                font-size: 1.8rem;
+                display: block;
+                margin-top: 1rem;
+            }
+
+            &:not(:first-child) {
+                margin-top: 8rem;
+            }
+
+            img {
+                width: 100%;
+                transition: all 0.3s ease 0s;
+                border-radius: 1rem;
+
+
+                &:hover {
+                    transform: scale(1.05);
+                    transition: all 0.3s ease 0s;
+                }
+            }
+        }
+    }
+}

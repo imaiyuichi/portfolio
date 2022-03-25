@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+.footer {
+    padding: 2.2rem 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #666666;
+        z-index: -1;
+    }
+
+    &__copyright {
+        color: #fff;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+
+        @include sp {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__wrapper {
+
+        display: flex;
+
+        &Sns {
+            display: inline-block;
+            margin-left: 2rem;
+
+            &Icon {
+                font-size: 4rem;
+                font-style: normal;
+                display: block;
+                font-family: "Font Awesome 5 Brands";
+                height: auto;
+
+                @include sp {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+}
+
+.fa-twitter {
+    color:#1da1f2
+}
+
+.fa-instagram {
+    color:#e1306c;
+}

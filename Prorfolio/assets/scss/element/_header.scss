@@ -1,0 +1,220 @@
+@charset "utf-8";
+
+.header {
+    padding-top: 3rem;
+
+    @include sp {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        z-index: 10;
+    }
+
+    @include tab {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        width: 95%;
+        z-index: 10;
+    }
+
+    &__title {
+        font-size: 3.6rem;
+        margin-left: -12rem;
+        line-height: 1;
+        color: $color-main;    
+
+        @include sp {
+            font-size: 2.2rem;
+            margin-left: 0;
+        }
+
+        @include tab {
+            margin-left: 2rem;
+            font-size: 3rem;
+        }
+    }
+
+    &__wrapper {
+        margin-top: 2rem;
+    }
+}
+
+
+.headerNav {
+    display: flex;
+    align-items: center;
+
+    @include sp {
+        margin: 0 0 0 auto;
+    }
+
+    @include tab {
+        margin: 0 2rem 0 auto;
+    }
+
+    &__image {
+        width: 8.7rem;
+
+        @include sp {
+            display: none;
+        }
+
+        @include tab {
+            display: none;
+        }
+        
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__hamburger {
+        display: none;
+
+        @include sp {
+            display: block;
+            position: relative;
+            background: $color-main;
+            cursor: pointer;
+            width: 5rem;
+            height:5rem;
+            border-radius: 0.5rem;
+            margin-left: 0;
+            z-index: 10;
+        }
+
+        span {
+            display: inline-block;
+            transition: all .4s;/*アニメーションの設定*/
+            position: absolute;
+            left: 1.4rem;
+            height: 0.3rem;
+            border-radius: 0.2rem;
+            background: #fff;
+            width: 45%;
+        }        
+
+        span:nth-of-type(1) {
+            top:15px; 
+        }
+          
+        span:nth-of-type(2) {
+            top:23px;
+        }
+          
+        span:nth-of-type(3) {
+            top:31px;
+        }    
+    }
+
+    .active span:nth-of-type(1) {
+        top: 18px;
+        left: 15px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 40%;
+    }
+    
+    .active span:nth-of-type(2) {
+      opacity: 0;
+    }
+    
+    .active span:nth-of-type(3){
+        top: 30px;
+        left: 15px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 40%;
+    }
+
+    &__list {
+        display: flex;
+        align-items: flex-start;
+        margin-left: auto;
+
+        @include sp {
+            position: fixed;
+            left: -40rem;
+            text-align: center;
+            top: 0;
+            transition: left 0.4s linear;
+            z-index: 10;
+            width: 80%;
+            height: 100%;
+            background: $color-background;
+            align-items: center;
+            justify-content: center;
+            flex-flow: column;
+        }
+
+        &Item {
+
+            @include sp {
+                width: 80%;
+                border-bottom: 0.1rem solid $color-main;
+
+                &:not(:first-child) {
+                    margin-top: 2rem;
+                }
+            }
+
+            a {
+                display: block;
+                font-size: 2.7rem;
+                margin-left: 4rem;
+                padding-bottom: 1rem;
+                color:  $color-main;
+                position: relative;
+
+                @include sp {
+                    margin-left: 0;
+                }
+
+                @include tab {
+                    padding-bottom: 0;
+                }
+
+                @include pc {
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        bottom: 20%;
+                        left: 0;
+                        width: 100%;
+                        height: 0.1rem;
+                        background: $color-main;
+                        transform: scale(0, 1);
+                        transform-origin: center top;
+                        transition: transform .3s;
+                    }
+
+                    &:hover::after {
+                        transform: scale(1, 1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header__overlay {
+    display: none;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .3s;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    
+}
+
+.header__overlay--open {
+    display: block;
+}
+
+  
+.headerNav__list--active {
+    left: 0;
+}

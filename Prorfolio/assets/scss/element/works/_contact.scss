@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+.contact {
+    background-color: $color-background;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    padding-top: 3rem;
+    box-shadow: 0 1rem 2.5rem 0 rgba(0, 0, 0, .5);
+
+    @include sp {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-bottom: 2rem;
+        border-radius: 1rem;
+        padding-top: 10rem;
+    }
+
+    &__section {
+
+        @include sp {
+            padding: 2rem;
+        }
+    }
+}
+
+
+.form {
+    margin: 5rem auto 0;
+    width: 90rem;
+
+    @include sp {
+        width: 100%;
+    }
+
+    &__mustText {
+        font-size: 1.4rem;
+        text-align: center;
+
+        span {
+            color:#e1306c;
+            font-size: 2rem;
+        }
+    }
+
+    &__list {
+
+        &Box {
+            margin: 2rem auto 0;
+            font-size: 2rem;
+            text-align: center;
+
+            @include sp {
+                font-size: 1.8rem;
+            }
+            
+            label {
+                display: block;
+                margin: auto;
+
+                p {
+                    display: inline-block;
+                    width: 15rem;
+                    text-align: left;
+                    vertical-align: top;
+                    padding-top: 1rem;
+
+                    @include sp {
+                        display: block;
+                        margin-left: 1rem;
+                    }
+
+                    span {
+                        font-size: 1.8rem;
+                        color: #e1306c;
+                    }
+                }
+
+                input {
+                    width: 50rem;
+                    background-color: #fff;
+                    line-height: 1rem;
+                    padding: 1rem;
+
+                    @include sp {
+                        width: 100%;
+                        margin-top: 1rem;
+                    }
+                }
+
+                textarea {
+                    width: 50rem;
+                    background-color: #fff;
+                    padding: 1rem;
+
+                    @include sp {
+                        width: 100%;
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+
+        &Button {
+            margin-top: 3rem;
+
+            button {
+                display: block;
+                width: 10rem;
+                font-size: 1.8rem;
+                padding: 1rem 0;
+                border-radius: 5rem;
+                background: $color-background;
+                border: solid 0.1rem $color-main;
+                text-align: center;
+                transition: all 0.3s ease 0s;
+                margin: auto;
+
+                &:hover {
+                    background: $color-main;
+                    color: #FCF7F7;
+                    transition: all 0.3s ease 0s;
+                }
+            }
+            // display: block;
+            // width: 20rem;
+            // font-size: 4rem;
+            // padding: 1rem;
+            // background: $color-background;
+            // margin: 3rem auto 0;
+            // border: solid 0.1rem $color-main;
+            // text-align: center;
+            // transition: all 0.3s ease 0s;
+    
+        
+        }
+    }
+}
+
+.contact__successMessage{
+    display: none;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 5rem;
+}
+
+.contact__errorMessage {
+    display: none;
+    text-align: center;
+    color: #f00;
+    font-size: 1.8rem;
+    margin-top: 5rem;
+}

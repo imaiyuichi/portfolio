@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <meta name="description" content="" /> <!-- ページの説明文 -->
+    <meta name="keywords" content="" /> <!-- ページのキーワード -->
+    <meta property="og:type" content="website" /> <!-- ページの種類 -->
+    <meta property="og:url" content="" /> <!-- ページのURL -->
+    <meta property="og:image" content="" /> <!-- サムネイル画像URL -->
+    <meta property="og:title" content="" /> <!-- ページのタイトル -->
+    <meta property="og:description" content="" /> <!-- ページの説明文 -->
+    <meta property="og:site_name" content="" /> <!-- ページのサイト名 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/> 
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" media="all" />  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>    
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="container__header header">
+            <h1 class="header__title wow fadeIn">Imai yuichi's portfolio</h1>
+            <nav class="header__wrapper headerNav">
+                <a href="#" class="headerNav__image wow flip">
+                    <img src="assets/img/home.png" alt="">
+                </a>
+                <button class="headerNav__hamburger js-hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>    
+                <ul class="headerNav__list js-headerNav">
+                    <li class="headerNav__listItem wow fadeIn">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="headerNav__listItem wow fadeIn">
+                        <a href="works.html">Works</a>
+                    </li>
+                    <li class="headerNav__listItem wow fadeIn">
+                        <a href="about.html">About</a>
+                    </li>
+                    <li class="headerNav__listItem wow fadeIn">
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__overlay js-overlay"></div>
+        </header>
+        <main class="container__main main">
+            <section class="main__section top ">
+                <h2 class="top__title wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">Welcome to My Portfolio </h2>
+                <p class="top__subtitle wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">ポートフォリオをご覧いただきありがとうございます！</p>
+                <a href="assets/html/contact.html" class="top__button wow fadeIn" data-wow-delay="1.5s">Contact</a>
+            </section>
+            <section class="main__section common__section works">
+                <p class="common__sectionSubtitle wow fadeInUp" data-wow-duration="0.5s">制作物</p>
+                <h3 class="common__sectionTitle wow fadeInUp" data-wow-duration="0.5s">Works</h3>
+                <ul class="works__wrapper js-swper__wrapper">
+                    <li class="works__wrapperItem">
+                        <a href="./bbb-school/index.html"><img src="assets/img/work-1.png" alt=""></a>
+                    </li>
+                    <li class="works__wrapperItem js-swper__wrapperSlide">
+                        <a href="./corporate2/index.html"><img src="assets/img/work-2.png" alt=""></a>
+                    </li>
+                    <li class="works__wrapperItem js-swper__wrapperSlide">
+                        <a href="./sneakers/index.html"><img src="assets/img/work-3.png" alt=""></a>
+                    </li>
+                    <li class="works__wrapperItem js-swper__wrapperSlide">
+                        <a href="./test02/index.html"><img src="assets/img/work-4.png" alt=""></a>
+                    </li>
+                    <li class="works__wrapperItem js-swper__wrapperSlide">
+                        <a href="./test01/index.html"><img src="assets/img/work-5.png" alt=""></a>
+                    </li>
+                    <li class="works__wrapperItem js-swper__wrapperSlide">
+                        <a href="#"><img src="assets/img/work-6 9.37.18.png" alt=""></a>
+                    </li>
+                </ul>
+            </section>
+            <section class="main__section common__section skills">
+                <p class="common__sectionSubtitle wow fadeInUp" data-wow-duration="0.5s">スキル</p>
+                <h3 class="common__sectionTitle wow fadeInUp" data-wow-duration="0.5s">Skills</h3>
+                <ul class="skills__list wow fadeInUp" data-wow-duration="0.5s">
+                    <li class="skills__listItem">
+                        <i class="fa-brands fa-html5 Icon"></i>
+                        <span>HTML</span>
+                    </li>
+                    <li class="skills__listItem">
+                        <i class="fa-brands fa-css3-alt Icon"></i>                        
+                        <span>CSS</span>
+                    </li>
+                    <li class="skills__listItem">
+                        <i class="fa-brands fa-sass Icon"></i>   
+                        <span>Scss</span>
+                    </li>
+                    <li class="skills__listItem">
+                        <i class="fa-brands fa-js Icon"></i>  
+                        <span>JavaScript ( jQuery )</span>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="footer__copyright">Copyright | yuichi 2022</p>
+            <div class="footer__wrapper">
+                <a class="footer__wrapperSns" href="#">
+                    <i class="fa-brands fa-twitter animated-hover faa-wrench footer__wrapperSnsIcon"></i>
+                </a>
+                <a class="footer__wrapperSns" href="#">
+                    <i class="fa-brands fa-instagram animated-hover faa-wrench footer__wrapperSnsIcon"></i>                
+                </a>
+                <a class="footer__wrapperSns" href="#">
+                    <i class="fa-brands fa-github animated-hover faa-wrench footer__wrapperSnsIcon"></i>                
+                </a>
+            </div>
+        </footer>
+        <a class="toTopButton" href="#">
+            <i class="fa-solid fa-circle-arrow-up"></i>
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>protfolio</title>
+
+    <meta name="description" content="" /> <!-- ページの説明文 -->
+    <meta name="keywords" content="" /> <!-- ページのキーワード -->
+    <!--og-->
+    <meta property="og:type" content="website" /> <!-- ページの種類 -->
+    <meta property="og:url" content="" /> <!-- ページのURL -->
+    <meta property="og:image" content="" /> <!-- サムネイル画像URL -->
+    <meta property="og:title" content="" /> <!-- ページのタイトル -->
+    <meta property="og:description" content="" /> <!-- ページの説明文 -->
+    <meta property="og:site_name" content="" /> <!-- ページのサイト名 -->
+<!--    favicon -->
+<!--    <link rel="shortcut icon" href="" />-->
+
+<!-- fontawesome -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<!-- css -->
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>    
+    <link rel="stylesheet" href="assets/css/animate.css">  <!-- wow -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" media="all" />  
+
+<!-- js -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  <!-- jQuery -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>    
+    <script src="assets/js/wow.min.js"></script>  <!-- wow -->
+    <script src="assets/js/script.js"></script> <!-- js -->
+    
+</head>
+<body>
+    <div class="container">
+        <header class="container__header header">
+            <h1 class="header__title wow fadeIn">Imai yuichi's portfolio</h1>
+            <nav class="header__wrapper headerNav">
+                <a href="#" class="headerNav__image wow flip">
+                    <img src="assets/img/home.png" alt="">
+                </a>
+                <button class="headerNav__hamburger js-hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>    
+                <ul class="headerNav__list js-headerNav">
+                    <li class="headerNav__listItem wow fadeIn">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="headerNav__listItem wow fadeIn">
+                        <a href="works.html">Works</a>
+                    </li>
+                    <li class="headerNav__listItem wow fadeIn">
+                        <a href="#">About</a>
+                    </li>
+                    <li class="headerNav__listItem wow fadeIn">
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__overlay js-overlay"></div>
+        </header>
+        <main class="container__main  main about">
+            <section class="main__section about__section">
+                <p class="common__sectionSubtitle wow fadeInUp" data-wow-duration="0.5s">私について</p>
+                <h3 class="common__sectionTitle wow fadeInUp" data-wow-duration="0.5s">About Me</h3>
+                <div class="about__wrapper">
+                    <div class="about__wrapperImage wow fadeInUp" data-wow-duration="0.5s">
+                        <img src="assets/img/aboutMe.png" alt="">
+                    </div>
+                    <div class="about__wrapperIntroduction">
+                        <h4 class="name wow fadeInUp" data-wow-delay="0.5s">今井 裕一<br>Imai Yuichi</h4>
+                        <p class="address wow fadeInUp" data-wow-delay="0.5s">東京都在住</p>
+                        <p class="text wow fadeInUp" data-wow-delay="0.5s">
+                            スキルをつけたい!<br>
+                            そんな想いからweb制作の勉強を始め、いつしかweb制作をする事が楽しみになっていました。<br>
+                            そんな大好きなweb制作を仕事にすべく、プログラミングの勉強をしております。<br><br>
+                            私は仕事をする上で、 "心が流れる仕事" を大事にしています。<br>
+                            ただホームページを作るだけでなく、また会いたいと想ってもらえるよう。<br>
+                            契約をしたいではなく、目の前のお客さまのために。<br>
+                            お客さま一人一人のニーズにあった、理想のホームページを一緒に作っていければ嬉しいです。<br><br>
+                            ✔️私ができること<br>
+                            ・Webページ制作<br>
+                            ・HTML/CSSのコーディング、スマートフォン対応<br>
+                            ・jQueryを使用して動きをつける<br><br>                  
+                        <a href="contact.html" class=" wow fadeInUp" data-wow-delay="0.5s">Contact</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="footer__copyright">Copyright | yuichi 2022</p>
+            <div class="footer__wrapper">
+                <a class="footer__wrapperSns" href="#">
+                    <i class="fa-brands fa-twitter animated-hover faa-wrench footer__wrapperSnsIcon"></i>
+                </a>
+                <a class="footer__wrapperSns" href="#">
+                    <i class="fa-brands fa-instagram animated-hover faa-wrench footer__wrapperSnsIcon"></i>                
+                </a>
+                <a class="footer__wrapperSns" href="#">
+                    <i class="fa-brands fa-github animated-hover faa-wrench footer__wrapperSnsIcon"></i>                
+                </a>
+            </div>
+        </footer>
+        <a class="toTopButton" href="#">
+            <i class="fa-solid fa-circle-arrow-up"></i>
+        </a>
+    </div>
+</body>
+</html>
